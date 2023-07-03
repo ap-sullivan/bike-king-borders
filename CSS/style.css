@@ -1,0 +1,1056 @@
+/* universal reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(240, 242, 167, 0.1);
+  color: #4a5402;
+  font-family: "raleway", sans-serif;
+  font-weight: 500;
+}
+
+/* these style entries are a fix to make sure the footer stays fixed at the bottom of the page and no gaps when screen size is changed. The footer is positioned absolute */
+
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: 130px;
+}
+
+/* Styling for the header/navigation bar and logo*/
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(124, 140, 3, 0.7);
+}
+
+nav {
+  width: 70%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: #4a5402;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+  display: flex;
+  opacity: 0.8;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* styling for navigation panel hovers */
+
+nav > ul > li > a:hover {
+  color: rgb(129, 7, 217, 1);
+  font-style: italic;
+}
+
+.home,
+.bikes,
+.rentals,
+.servicing,
+.localArea,
+.contact {
+  transition: all 0.2s ease-in-out;
+}
+
+.home:hover,
+.bikes:hover,
+.rentals:hover,
+.servicing:hover,
+.localArea:hover,
+.contact:hover {
+  color: rgb(139, 111, 111);
+  transform: scale(1.3);
+}
+
+.homepageHero {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-image: url(../images/home_page_hero4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+/* styling for the main of the HOMEPAGE */
+
+/* styling for the homepage icons and introductory text */
+
+.introIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 50px 0px 50px;
+}
+
+.introIcons h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.introIcons p {
+  text-align: justify;
+  letter-spacing: -0.1px;
+}
+
+.salesIcon,
+.localareaIcon,
+.serviceIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.salesIcon i,
+.localareaIcon i,
+.serviceIcon i {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  border: 2px;
+  border-style: solid;
+  border-color: #4a5402;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.salesInfo,
+.localareaInfo,
+.serviceInfo {
+  margin: 0px 35px 80px 35px;
+  font-size: 18px;
+}
+
+/* styling for the more info header and text below the images */
+
+.extraInfo,
+.teamInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px 75px 80px 75px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+.teamInfo {
+  flex-direction: row-reverse;
+}
+
+.extraInfoCopy {
+  height: 230px;
+}
+
+.extraInfo img,
+.teamInfo img {
+  height: 230px; /*this needs to match height of img so they are aligned */
+  width: auto;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.extraInfo h1,
+.teamInfo h1 {
+  color: #4a5402;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  height: 50px;
+  width: 500px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1.5px;
+  border-style: solid;
+  border-color: #4a5402;
+  border-radius: 130px;
+}
+
+.teamInfo h1 {
+  margin-left: 35px;
+}
+
+.extraInfo p {
+  font-size: 20px;
+  padding: 30px 40px 30px 5px;
+}
+
+.teamInfo p {
+  font-size: 20px;
+  padding: 40px 5px 30px 40px;
+}
+
+.mapContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 75px;
+  margin-left: 80px;
+  margin-bottom: 70px;
+}
+
+.directions h1 {
+  width: 350px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 30px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 100px;
+  border: 1.5px;
+  border-style: solid;
+  border-color: #4a5402;
+  font-size: 32px;
+}
+
+.mapContainer p {
+  padding-top: 25px;
+  margin-left: 30px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.map {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: block;
+}
+
+/* styling for the Mailing list and subscribe info */
+
+.signUpInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-right: 75px;
+  margin-left: 80px;
+  margin-bottom: 60px;
+}
+
+.signUpInfo h1 {
+  width: 450px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 30px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 100px;
+  border: 1.5px;
+  border-style: solid;
+  border-color: #4a5402;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.signUpInfo p {
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe > form > input {
+  padding: 5px;
+  margin: 5px 10px 7px 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid #4a5402;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* this subs div centres the subscribe button */
+
+.subs {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.subscribeBtn {
+  text-transform: uppercase;
+  width: 40%;
+  margin: 20px 10px 5px 10px;
+  padding: 7px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1.5px solid #4a5402;
+  border-radius: 10px;
+  color: #4a5402;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.subscribeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(124, 140, 3, 0.5),
+    rgb(129, 7, 217, 0.6)
+  );
+  font-size: 22.5px;
+}
+
+/* responsive stylings for the HOME PAGE */
+
+@media screen and (max-width: 768px) {
+  .introIcons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .introIcons h2 {
+    font-size: 20px;
+  }
+
+  .introIcons p {
+    font-size: 18px;
+  }
+
+  .salesInfo p,
+  .localareaInfo p,
+  .serviceInfo p {
+    font-size: 16px;
+  }
+
+  .salesInfo,
+  .localareaInfo,
+  .serviceInfo {
+    margin-bottom: 30px;
+  }
+
+  .extraInfoCopy {
+    height: auto;
+  }
+
+  .extraInfo,
+  .teamInfo {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .extraInfo h1,
+  .teamInfo h1 {
+    font-size: 26px;
+    height: 65px;
+    width: 100vw;
+    margin-left: 0px;
+  }
+
+  .extraInfo p,
+  .teamInfo p {
+    font-size: 16px;
+    padding: 0px 0px;
+    margin: 20px 40px 15px 40px;
+  }
+
+  .extraInfo img {
+    height: 200px;
+  }
+
+  .teamInfo img {
+    height: 200px;
+  }
+
+  .map {
+    margin-bottom: 20px;
+  }
+
+  .mapContainer h1,
+  .signUpInfo h1 {
+    width: 100vw;
+    font-size: 26px;
+    margin: 0px;
+    margin-left: 0px;
+  }
+
+  .mapContainer p,
+  .signUpInfo p {
+    font-size: 16px;
+    padding: 0px 0px;
+    margin: 20px 40px 15px 40px;
+  }
+
+  .mapContainer,
+  .signUpInfo {
+    margin-top: 30px;
+    flex-direction: column;
+    margin: 30px 30px 20px 30px;
+  }
+
+  .subscribe > form > input {
+    width: 200px;
+    font-size: 14px;
+  }
+
+  .subscribeBtn {
+    width: 55%;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+/* STYLING FOR THE BIKES LANDING PAGE */
+
+/* need to set the position of this absolute and the homePageHero as relative so it is on top of the image */
+.productIntro {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.bikesTiles {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.bikeImages {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  border-style: solid;
+  border-color: #4a5402;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 40px;
+}
+
+.imageCaption {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4a5402;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align: center;
+  opacity: 1;
+  z-index: 1;
+  letter-spacing: 0.9px;
+  text-decoration: none;
+  height: 250px;
+  width: 300px;
+}
+
+.bikeImages img {
+  opacity: 0.5;
+  position: absolute;
+}
+
+.bikeImages.two img {
+  width: 350px;
+  height: auto;
+}
+
+.bikeImages.four img {
+  width: 500px;
+  height: auto;
+}
+
+.bikeImages.six img {
+  width: 500px;
+  height: auto;
+}
+
+/* responsive stylings for Bikes Landing page */
+
+@media screen and (max-width: 768px) {
+  .productIntro {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+/* styling for the hover effects on the tiles */
+
+.imageCaption:hover {
+  color: rgb(129, 7, 217, 0.8);
+  cursor: pointer;
+  transform: scale(1.2);
+  font-style: italic;
+}
+
+.bikeImages:hover {
+  box-shadow: 0px 0px 0px 1.5px rgb(129, 7, 217, 0.4);
+  border-color: rgb(129, 7, 217, 0.4);
+}
+
+/* smaller screen adjustments for BIKES LANDING PAGE */
+
+@media screen and (max-width: 768px) {
+}
+
+/* Styling for the BIKE SALES PAGES */
+
+.backToBikes {
+  width: 220px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  border: solid 1.5px #4a5402;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.backToBikes a {
+  text-decoration: none;
+  color: #4a5402;
+}
+
+.backToBikes:hover {
+  transform: scale(1.1);
+}
+
+.bikeSales {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.bikeSales img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 270px;
+  overflow: hidden;
+  margin: 0px 50px 0px 0px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bikeInfo h1 {
+  font-size: 26px;
+  padding: 10px 2px;
+}
+
+.bikeInfo ul {
+  font-size: 18px;
+  list-style-image: url(../Logos&Icons/check_solid.svg);
+  line-height: 1.4;
+}
+
+.priceBtn {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+.priceBtn button {
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgb(129, 7, 217, 0.3);
+  border: solid 1px #4a5402;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  letter-spacing: 1.1px;
+  color: #4a5402;
+}
+
+.priceBtn button:hover {
+  font-size: 24px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.bikeSales img:hover {
+  transform: scale(1.2);
+}
+
+/* smaller screen adjustments for BIKES SALES PAGE */
+
+@media screen and (max-width: 768px) {
+  .bikeSales {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bikeSales img {
+    margin: 0px;
+    width: 300px;
+  }
+
+  .bikeInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 40px;
+    font-size: 16px;
+  }
+
+  .bikeInfo ul {
+    margin-bottom: 10px;
+  }
+
+  .priceBtn {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+}
+
+/* Styling for the Rentals Page */
+
+.rentalIntro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rentalIntro h1 {
+  width: auto;
+  padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  border-radius: 100px;
+  border: 1.5px;
+  border-style: solid;
+  border-color: #4a5402;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.rentalIntro p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 750px;
+  font-size: 20px;
+  margin-right: 50px;
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+
+.rentalTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.rentalTable caption {
+  margin-bottom: 10px;
+}
+
+.rentalTable td {
+  width: 180px;
+  height: 40px;
+  text-align: center;
+}
+
+.carouselBikeImages {
+  height: 250px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Responsive stylings for the rentals page */
+
+@media screen and (max-width: 768px) {
+  .rentalTable {
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .rentalIntro h1 {
+    font-size: 26px;
+    width: 90vw;
+    margin-top: 10px;
+  }
+
+  .rentalIntro p {
+    font-size: 16px;
+    width: 90vw;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .carouselBikeImages {
+    display: none;
+  }
+}
+
+/* Styling for the CONTACT PAGE */
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contactUs h1 {
+  width: 400px;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 100px;
+  border: 1.5px;
+  border-style: solid;
+  border-color: #4a5402;
+  margin-bottom: 20px;
+}
+
+.contactUs p {
+  width: 400px;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactForm input,
+.contactForm textarea,
+.contactForm button {
+  padding: 5px;
+  margin: 5px;
+  width: 400px;
+  border-radius: 10px;
+  border: solid;
+  border-color: #4a5402;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+.contactForm button {
+  text-transform: uppercase;
+  height: 40px;
+  margin-bottom: 40px;
+  color: #4a5402;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.6),
+    rgb(124, 140, 3, 0.5)
+  );
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.contactForm button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(124, 140, 3, 0.5),
+    rgb(129, 7, 217, 0.6)
+  );
+}
+
+/* responsive styles for the contact page */
+
+@media screen and (max-width: 768px) {
+  .contactUs h1 {
+    width: 90vw;
+  }
+
+  .contactUs p {
+    width: 300px;
+    font-size: 16px;
+  }
+
+  .contactForm input,
+  .contactForm textarea,
+  .contactForm button {
+    width: 300px;
+  }
+}
+
+/* styling for the UNDER CONSTRUCTION PAGE */
+
+.constructionPage {
+  min-height: 100vh;
+  background-color: rgb(129, 7, 217, 0.3);
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(129, 7, 217, 0.3),
+    rgb(124, 140, 3, 0.4)
+  );
+}
+
+.underConstruction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-repeat: repeat;
+}
+
+.underConstruction h1 {
+  text-align: center;
+  font-size: 46px;
+  margin: 20px;
+}
+
+.underConstruction img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.underConstruction button {
+  margin: 40px;
+  height: 60px;
+  width: 120px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(124, 140, 3, 0.4);
+  color: rgb(129, 7, 217, 1);
+  font-size: 20px;
+  font-weight: bolder;
+  border: solid 1px;
+}
+
+.underConstruction button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* styling for the FOOTER (all pages the same)*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 130px; /*if changing this need to change content wrap to the same so footer stays fixed at bottom of page */
+  background-color: rgb(124, 140, 3, 0.7);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.tripadvisor,
+.phone,
+.address,
+.social {
+  padding: 10px 30px 16px 30px;
+  font-size: 18px;
+}
+
+.callsToAction {
+  font-weight: bolder;
+  line-height: 1.3;
+}
+
+.tripadvisor {
+  margin-top: 5px;
+  background-image: url(../Logos&Icons/trip_advisor_png_green.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tripadvisor button {
+  width: 100px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.tripadvisor:hover {
+  background-image: url(../Logos&Icons/trip_advisor_png_purple.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.address a {
+  text-decoration: none;
+  color: #4a5402;
+}
+
+.address a:hover {
+  color: rgb(129, 7, 217, 1);
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.social i {
+  color: #4a5402;
+  font-size: 28px;
+  padding: 2px;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+.social i:hover {
+  color: rgb(129, 7, 217, 1);
+  transform: scale(1.1);
+}
+
+.copyright {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* change of stylings so HEADER/FOOTER suitable for responsive screens */
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    height: 100px;
+    width: auto;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    padding-left: 20px;
+  }
+
+  .homepageHero {
+    height: 20px;
+    width: 100%;
+    background-image: none;
+  }
+
+  /* need to change the content wrap as changing the footer height */
+
+  .contentWrap {
+    padding-bottom: 360px;
+  }
+
+  footer {
+    height: 360px;
+  }
+
+  .contactInfo {
+    align-items: center;
+    flex-direction: column;
+  }
+}
